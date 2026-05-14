@@ -50,12 +50,12 @@ class Program
         }
 
         // Starta viewer-processen i ett nytt fönster
+        var exePath = Process.GetCurrentProcess().MainModule!.FileName;
         using var process = new Process();
-        process.StartInfo.FileName = "dotnet";
+        process.StartInfo.FileName = exePath;
         // Anropa sig själv med "viewer" som argument
-        process.StartInfo.Arguments = "run viewer";
+        process.StartInfo.Arguments = "viewer";
         process.StartInfo.UseShellExecute = true;
-        process.StartInfo.CreateNoWindow = false;
         process.Start();
 
         // Starta Named Pipe Server
