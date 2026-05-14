@@ -18,7 +18,7 @@ class Program
         }
 
         // Annars är vi i "Controller-läge" (din laptop)
-        string markdownFilePath = "../slides/presentation.md"; // Standardfil
+        string markdownFilePath = "./slides/example-presentation.md"; // Standardfil
 
         // Om användaren skickar med ett filnamn: dotnet run min_presentation.md
         if (args.Length > 0)
@@ -127,7 +127,7 @@ class Program
             AnsiConsole.WriteLine();
 
             // Rendera markdown med Spectre.Console
-            var markdown = new Markdown(slideContent);
+            var markdown = new Markup(slideContent);
             AnsiConsole.Write(markdown);
 
             Console.CursorVisible = false;

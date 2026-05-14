@@ -1,4 +1,4 @@
-# 🚀 Välkommen till Framtiden
+﻿# 🚀 Välkommen till Framtiden
 Vår nya terminal-baserade presentation!
 
  Snabbt
